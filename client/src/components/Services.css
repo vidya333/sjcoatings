@@ -1,0 +1,94 @@
+.services { padding: 7rem 2rem; background: #e0f2fe; }
+.services__inner { max-width: 1280px; margin: 0 auto; }
+.services__header { margin-bottom: 3.5rem; }
+.services__sub { color: #4a6a7a; margin-top: 1rem; max-width: 500px; font-size: 0.95rem; line-height: 1.7; }
+
+.services__layout { display: grid; grid-template-columns: 340px 1fr; gap: 2rem; align-items: start; }
+
+.services__list { display: flex; flex-direction: column; gap: 0.4rem; }
+.services__tab {
+  display: flex; align-items: center; gap: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid transparent; border-radius: 8px;
+  cursor: pointer; text-align: left; width: 100%;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+  color: #4a6a7a;
+}
+.services__tab:hover { background: rgba(255,255,255,0.85); color: #0f172a; }
+.services__tab--active {
+  background: #ffffff !important;
+  border-color: rgba(14,116,144,0.3) !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 16px rgba(14,116,144,0.12);
+}
+.services__tab-num { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #0e7490; flex-shrink: 0; width: 20px; }
+.services__tab-icon { font-size: 1.1rem; flex-shrink: 0; }
+.services__tab-title { font-size: 0.88rem; font-weight: 500; flex: 1; letter-spacing: 0.02em; }
+.services__tab-arrow { margin-left: auto; color: #0e7490; opacity: 0; transition: opacity 0.2s; font-size: 0.9rem; }
+.services__tab--active .services__tab-arrow { opacity: 1; }
+
+.services__detail {
+  padding: 2.5rem; min-height: 420px;
+  background: #ffffff;
+  border: 1px solid rgba(14,116,144,0.15);
+  box-shadow: 0 8px 32px rgba(14,116,144,0.08);
+}
+.services__detail-icon { font-size: 2.8rem; margin-bottom: 1rem; }
+.services__detail-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2rem;
+  letter-spacing: 0.06em; color: #0f172a; margin-bottom: 1rem;
+}
+.services__fields { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.4rem; }
+.services__field-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 0.1em; padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(14,116,144,0.25); color: #0e7490;
+  border-radius: 4px; text-transform: uppercase;
+  background: rgba(14,116,144,0.06);
+}
+.services__detail-desc { color: #4a6a7a; line-height: 1.75; font-size: 0.9rem; margin-bottom: 1.5rem; }
+.services__specs-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  letter-spacing: 0.14em; color: #0891b2;
+  text-transform: uppercase; margin-bottom: 0.8rem;
+}
+.services__spec { display: flex; align-items: center; gap: 0.7rem; color: #0f172a; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.services__spec-dot { width: 5px; height: 5px; background: #34d399; border-radius: 50%; flex-shrink: 0; }
+/* Flex layout to keep vector icons neatly alongside tab headings */
+.services__tab {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.services__tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* Vector icon baseline configurations */
+.services__icon-svg {
+  color: var(--secondary-text-color, #94a3b8);
+  transition: color 0.2s ease;
+}
+
+/* Change icon tint state when parent tab is focused or active */
+.services__tab--active .services__icon-svg {
+  color: var(--primary-color, #3b82f6);
+}
+
+/* Highlight panel detail feature hero icon */
+.services__icon-large {
+  color: var(--primary-color, #3b82f6);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .services__layout { grid-template-columns: 1fr; }
+  .services__list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+}
+@media (max-width: 560px) { .services__list { grid-template-columns: 1fr; } }

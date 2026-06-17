@@ -1,0 +1,65 @@
+.about { padding: 7rem 2rem; background: #f0f9ff; }
+.about__inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.about__body { color: #4a6a7a; line-height: 1.8; margin: 1.2rem 0; font-size: 0.95rem; }
+.about__pillars { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 2rem; }
+.about__pillar {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.2rem;
+  background: rgba(14,116,144,0.06);
+  border: 1px solid rgba(14,116,144,0.14);
+  border-radius: 8px;
+  transition: background 0.25s, transform 0.25s;
+}
+.about__pillar:hover { background: rgba(14,116,144,0.1); transform: translateY(-2px); }
+.about__pillar-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.about__pillar strong { display: block; color: #0f172a; font-size: 0.9rem; margin-bottom: 0.2rem; }
+.about__pillar p { color: #4a6a7a; font-size: 0.8rem; line-height: 1.5; margin: 0; }
+
+/* Timeline */
+.about__timeline { display: flex; flex-direction: column; gap: 0; margin-bottom: 2.5rem; }
+.about__milestone {
+  display: grid; grid-template-columns: 52px 24px 1fr;
+  gap: 0 1rem; align-items: start; min-height: 64px;
+}
+.about__milestone-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem; color: #0e7490;
+  font-weight: 600; padding-top: 2px; letter-spacing: 0.06em;
+}
+.about__milestone-line { display: flex; flex-direction: column; align-items: center; }
+.about__milestone-dot {
+  width: 10px; height: 10px;
+  border: 2px solid #0e7490; border-radius: 50%;
+  background: #f0f9ff; flex-shrink: 0; margin-top: 2px;
+}
+.about__milestone-track {
+  width: 1px; flex: 1;
+  background: linear-gradient(to bottom, rgba(14,116,144,0.4), rgba(14,116,144,0.1));
+  min-height: 44px;
+}
+.about__milestone-text { font-size: 0.85rem; color: #4a6a7a; line-height: 1.55; padding-top: 1px; }
+
+/* Certs */
+.about__cert-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.about__cert {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: rgba(14,116,144,0.06);
+  border: 1px solid rgba(14,116,144,0.14);
+  border-radius: 6px;
+  font-size: 0.78rem; color: #0f172a; letter-spacing: 0.04em;
+}
+.about__cert-check { color: #0e7490; font-weight: 700; font-size: 0.9rem; }
+.about__pillar-svg {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--primary-color, #0056b3); /* Optional: changes icon color to fit your theme */
+}
+
+@media (max-width: 900px) {
+  .about__inner { grid-template-columns: 1fr; gap: 3rem; }
+}

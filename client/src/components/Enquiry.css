@@ -1,0 +1,110 @@
+.enquiry { padding: 7rem 2rem; background: #e0f2fe; }
+.enquiry__inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 420px 1fr;
+  gap: 4rem; align-items: start;
+}
+.enquiry__desc { color: #4a6a7a; line-height: 1.75; font-size: 0.95rem; margin: 1.2rem 0 2rem; }
+
+.enquiry__contact-items { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 2rem; }
+.enquiry__contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+.enquiry__contact-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.enquiry__contact-label {
+  display: block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem; color: #0e7490;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.15rem;
+}
+.enquiry__contact-value { font-size: 0.88rem; color: #0f172a; }
+
+.enquiry__guarantee {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  background: rgba(52,211,153,0.08);
+  border: 1px solid rgba(52,211,153,0.25);
+  border-radius: 8px;
+}
+.enquiry__guarantee-icon { font-size: 1.5rem; flex-shrink: 0; }
+.enquiry__guarantee strong { display: block; color: #0f172a; font-size: 0.9rem; margin-bottom: 0.3rem; }
+.enquiry__guarantee p { font-size: 0.78rem; color: #4a6a7a; line-height: 1.55; margin: 0; }
+
+.enquiry__form-card {
+  padding: 2.4rem; background: #ffffff;
+  border: 1px solid rgba(14,116,144,0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(14,116,144,0.1);
+}
+.enquiry__form-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem;
+  letter-spacing: 0.06em; color: #0f172a; margin-bottom: 1.8rem;
+}
+.enquiry__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.enquiry__field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.enquiry__field label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+  letter-spacing: 0.1em; color: #4a6a7a; text-transform: uppercase;
+}
+.enquiry__field input,
+.enquiry__field select,
+.enquiry__field textarea {
+  background: #f8fbff;
+  border: 1.5px solid rgba(14,116,144,0.18);
+  color: #0f172a; padding: 0.75rem 1rem;
+  font-family: 'Inter', sans-serif; font-size: 0.88rem;
+  border-radius: 6px; outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  resize: vertical; width: 100%;
+}
+.enquiry__field input:focus,
+.enquiry__field select:focus,
+.enquiry__field textarea:focus {
+  border-color: #0e7490;
+  box-shadow: 0 0 0 3px rgba(14,116,144,0.1);
+}
+.enquiry__field input::placeholder,
+.enquiry__field textarea::placeholder { color: #b0c8d4; }
+.enquiry__field select option { background: #ffffff; color: #0f172a; }
+
+.enquiry__error { font-size: 0.72rem; color: #dc2626; font-family: 'JetBrains Mono', monospace; }
+.enquiry__server-error {
+  padding: 0.8rem 1rem;
+  background: rgba(220,38,38,0.06); border: 1px solid rgba(220,38,38,0.2);
+  border-radius: 6px; font-size: 0.82rem; color: #dc2626; margin-bottom: 1rem;
+}
+.enquiry__submit { width: 100%; padding: 1rem; font-size: 0.85rem; }
+.enquiry__submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.enquiry__success {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 3rem 1rem; gap: 1rem;
+}
+.enquiry__success-icon { font-size: 3rem; }
+.enquiry__success h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #0f172a; letter-spacing: 0.06em; }
+.enquiry__success p { color: #4a6a7a; font-size: 0.9rem; line-height: 1.6; }
+/* Align SVGs correctly inside contact blocks */
+.enquiry__icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--primary-color, #0056b3); /* Set to your theme's brand color */
+}
+
+/* Success status animation/color setup */
+.enquiry__success-svg {
+  color: #10b981; /* Corporate Green color */
+}
+
+/* Error banner styling alignment */
+.enquiry__server-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ef4444; /* Alert Red color */
+}
+.enquiry__error-svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .enquiry__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .enquiry__row { grid-template-columns: 1fr; }
+}
