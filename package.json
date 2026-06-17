@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "SJ Coatings – Industrial Coating Website (MERN Stack)",
   "scripts": {
-    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
-    "start:server": "cd server && npm start",
-    "start:client": "cd client && npm start"
-  },
+  "build": "cd client && npm install && npm run build",
+  "start": "node server/index.js",
+  "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+},
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
