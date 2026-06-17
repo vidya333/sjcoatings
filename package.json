@@ -1,12 +1,11 @@
 {
   "name": "sjcoatings",
   "version": "1.0.0",
-  "description": "SJ Coatings – Industrial Coating Website (MERN Stack)",
+  "description": "SJ Coatings - Industrial Coating Website (MERN Stack)",
   "scripts": {
-  "build": "cd client && npm install && npm run build",
-  "start": "node server/index.js",
-  "install:all": "npm install && cd server && npm install && cd ../client && npm install"
-},
+    "build": "cd server && npm install && cd ../client && npm install && npm run build",
+    "start": "node server/index.js"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
