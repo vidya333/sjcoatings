@@ -45,7 +45,7 @@ export default function Enquiry() {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setStatus('loading');
     try {
-      await axios.post('/api/enquiry', form);
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/enquiry`, form);
       setStatus('success');
       setForm(initialForm);
     } catch {
